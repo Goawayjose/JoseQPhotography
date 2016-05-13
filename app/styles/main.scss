@@ -1,0 +1,203 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+// endbower
+html, body , * {
+  margin: 0;
+}
+
+.Maincontainer {
+  top: 20px;
+}
+
+header{
+  padding-top: 20px;
+  position: fixed;
+  height: 100px;
+  z-index: 6;
+  background-color: white;
+  width: 100%;
+}
+
+header h1 {
+  margin-left: 20px;
+  float: left;
+}
+header h6 {
+  padding-top: 30px;
+  margin-left: 20px;
+  float: left;
+}
+
+header a {
+  text-align: center;
+  width: 100px;
+  display: block;
+  position: relative;
+  color: black;
+  &:after{
+    position: absolute;
+    transition: .9s;
+    height: 1.5px;
+    left: 50%;
+    width: 0%;
+    bottom: 0;
+    content: "";
+    background-color: black;
+  }
+  &:hover {
+    text-decoration: none;
+    color: black;
+      &:after{
+        left: 0;
+        width: 100%;
+      }
+  }
+}
+
+.AboutRoll {
+  position: relative;
+  float: left;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  background: white;
+  &:after{
+    content: "";
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    border-top: 60px solid transparent;
+    border-left: 60px solid black;
+    transform: rotate(45deg) scale(0.5);
+  }
+}
+
+.main {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 9;
+  animation-name: brighten;
+  animation-duration: 2s;
+  left: -100%;
+}
+
+@keyframes brighten {
+  0%{
+    opacity: 0.8;
+    left: 0;
+  }
+  99% {
+    opacity: 0;
+    left: 0;
+  }
+  100%{
+    left:-100%;
+  }
+}
+.on {
+  animation-name: show;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+    left: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.darkenBack {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  position: absolute;
+  animation-name: brighten;
+  animation-duration: 0.9s;
+  left: -100%;
+}
+
+@keyframes brighten {
+  0%{
+    opacity: 0.8;
+    left: 0;
+  }
+  99% {
+    opacity: 0;
+    left: 0;
+  }
+  100%{
+    left:-100%;
+  }
+}
+
+.D_on {
+  animation-name: darken;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+@keyframes darken {
+  0%{
+    opacity: 0;
+    left: 0;
+  }
+  100% {
+    opacity: 0.8;
+    left: 0;
+  }
+}
+
+.aboutContent {
+  height: 100vh;
+  width: 70%;
+  background: white;
+  position: absolute;
+  animation-name: Wreturn;
+  animation-duration: 0.9s;
+  left: -100%;
+}
+
+@keyframes Wreturn {
+  0%{
+    left: 0;
+  }
+  100%{
+    left:-100%;
+  }
+}
+
+.W_on {
+  animation-name: Wgo;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+@keyframes Wgo {
+  0%{
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.view {
+  padding-top: 120px;
+}
