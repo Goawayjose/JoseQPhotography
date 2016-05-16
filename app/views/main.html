@@ -1,8 +1,18 @@
-<div class="jumbotron">
 
 
+
+
+
+<div ng-repeat="item in myImages.list">
+
+<img class="col-md-4" ng-src="{{item.img}}"/>
+{{myImages.title}}
 </div>
 
-<div class="row marketing">
 
-</div>
+
+<style>
+  img {
+    margin-top: 40px;
+  }
+</style>

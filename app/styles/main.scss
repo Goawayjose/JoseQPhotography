@@ -1,16 +1,10 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import url(https://fonts.googleapis.com/css?family=Raleway:100|Passion+One:400,700|Coda:400,800);
-$tan: #FFDBD5;
-$greyblue: #65687F;
-$blue: #0C1654;
-
-h1 {
-font-family: 'passion one', cursive;
-font-weight: 400;
-}
 // endbower
+
+$greyblue : #65687F;
+
 html, body , * {
   margin: 0;
   font-family: 'Raleway', sans-serif;
